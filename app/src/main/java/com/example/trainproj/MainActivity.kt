@@ -13,7 +13,7 @@ import com.example.trainproj.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = requireNotNull(_binding)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,6 +44,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(shareIntent)
         }
     }
-    //new merge
-    // 1234556498
 }
