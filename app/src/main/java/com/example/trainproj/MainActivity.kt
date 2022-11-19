@@ -20,8 +20,6 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.i(TAG, "OnCreate called")
-
         val ivPoster = findViewById<ImageView>(R.id.ivPoster)
 
         ivPoster.setOnClickListener {
@@ -44,48 +42,6 @@ class MainActivity : AppCompatActivity() {
                 putExtra("qwe", 1)
             }
             startActivity(shareIntent)
-
-//            AlertDialog.Builder(this@MainActivity)
-//                .setTitle("qweertert")
-//                .setMessage("fsjnawleks.fnms.mwenoilkalskdjalkjqiwlkfas,fmdf")
-//                .setPositiveButton("Да") { _, _ -> }
-//                .create()
-//                .show()
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.i(TAG, "OnStart called")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.i(TAG, "OnResume called")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.i(TAG, "OnPause called")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.i(TAG, "onStop called")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i(TAG, "OnDestroy called")
-        _binding = null
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        Log.i(TAG, "onSaveInstanceState called")
-    }
-
-    companion object {
-        const val TAG = "tag"
     }
 }
